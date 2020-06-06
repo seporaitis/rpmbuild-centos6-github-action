@@ -7,4 +7,6 @@ RUN yum install -y \
   epel-release \
   python2-mock
 
+COPY entrypoint.sh /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
