@@ -1,0 +1,12 @@
+name: "rpmbuild on CentOS6"
+description: GitHub action for building rpm packages on CentOS6
+inputs:
+  command:
+    description: Command to run.
+    required: true
+    default: 'echo "Hello, World!"'
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+  - ${{ inputs.command }}
